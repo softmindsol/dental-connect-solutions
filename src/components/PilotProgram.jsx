@@ -5,29 +5,32 @@ export function PilotProgram() {
   const steps = [
     {
       number: "1",
-      description:
-        "Apply below — takes under two minutes, no commitment required.",
+      boldPart: "Apply below",
+      regularPart: " — takes under two minutes, no commitment required.",
     },
     {
       number: "2",
-      description:
-        "We schedule a short discovery call to understand your current call volume and front-desk workflow.",
+      boldPart: "We schedule a short discovery call",
+      regularPart:
+        " to understand your current call volume and front-desk workflow.",
     },
     {
       number: "3",
-      description:
-        "Dental Connect runs alongside your team for a trial period — answering overflow calls, not replacing anyone.",
+      boldPart: "Dental Connect runs alongside your team",
+      regularPart:
+        " for a trial period — answering overflow calls, not replacing anyone.",
     },
     {
       number: "4",
-      description: "Your feedback helps shape the next version.",
+      boldPart: "Your feedback helps shape",
+      regularPart: " the next version.",
     },
   ];
 
   return (
     <section
       id="pilot-program"
-      className="relative w-full py-24 bg-[var(--color-secondary)] overflow-hidden"
+      className="relative w-full py-18 bg-[var(--color-secondary)] overflow-hidden"
     >
       {/* Background Gradient */}
       <div className="absolute top-[-200px] right-[-160px] w-[520px] h-[520px] bg-[radial-gradient(circle_at_50%_50%,rgba(46,168,224,0.18)_0%,rgba(46,168,224,0)_70%)] pointer-events-none"></div>
@@ -35,7 +38,7 @@ export function PilotProgram() {
       <div className="w-full mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16 lg:gap-[60px] relative z-10">
         <div className="flex-1 flex flex-col items-start pt-4">
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-[125px] h-[7px] bg-[#2EA8E0] rounded-full"></div>
+            <div className="w-[7px] h-[7px] bg-[#2EA8E0] rounded-full"></div>
             <h3 className="font-bold text-[12.5px] uppercase tracking-[1.75px] text-[#2EA8E0]">
               Florida pilot program
             </h3>
@@ -67,23 +70,26 @@ export function PilotProgram() {
         </div>
 
         {/* Right side box */}
-        <div className="flex-1 w-full lg:max-w-[450px]">
+        <div className="flex-1 w-full lg:max-w-[550px]">
           <div className="bg-white/5 border border-white/15 rounded-[26px] p-8 lg:p-10 flex flex-col h-full justify-between backdrop-blur-sm">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-7">
               {steps.map((step, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
                   <div className="w-[26px] h-[26px] rounded-full bg-[#2EA8E0] shrink-0 flex items-center justify-center text-[12px] font-bold text-[var(--color-secondary)]">
                     {step.number}
                   </div>
-                  <p className="text-[14.5px] leading-[23px] font-bold text-white pt-0.5">
-                    {step.description}
+                  <p className="text-[14.5px] leading-[24px] text-[#D6EFFF] pt-0.5">
+                    <span className="font-bold text-white">
+                      {step.boldPart}
+                    </span>
+                    {step.regularPart}
                   </p>
                 </div>
               ))}
             </div>
 
             <div className="mt-10">
-              <Button className="w-full h-[54px] text-[15px] rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white shadow-[0_10px_24px_rgba(21,101,168,0.3)]">
+              <Button className="w-full h-[54px] text-[15px] font-semibold rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white shadow-[0_10px_24px_rgba(21,101,168,0.3)]">
                 Apply for the Florida Pilot
               </Button>
             </div>

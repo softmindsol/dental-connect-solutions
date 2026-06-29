@@ -38,7 +38,7 @@ export function FAQ() {
       <div className="w-full mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-[125px] h-[7px] bg-[#2EA8E0] rounded-full"></div>
+            <div className="w-[7px] h-[7px] bg-[#2EA8E0] rounded-full"></div>
             <h3 className="font-bold text-[12.5px] uppercase tracking-[1.75px] text-[var(--color-primary)]">
               Common questions
             </h3>

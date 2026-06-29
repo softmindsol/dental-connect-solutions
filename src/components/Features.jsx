@@ -7,6 +7,8 @@ import {
   Building2,
   Smartphone,
 } from "lucide-react";
+import { TbDental } from "react-icons/tb";
+import { IoIosLink } from "react-icons/io";
 
 export function Features() {
   const features = [
@@ -34,12 +36,12 @@ export function Features() {
       description: "Reduce no-shows and improve patient communication.",
     },
     {
-      icon: <Building2 className="w-5 h-5 text-[var(--color-primary)]" />,
+      icon: <TbDental className="w-5 h-5 text-[var(--color-primary)]" />,
       title: "Built for dental practices",
       description: "Trained on dental-office workflows — not a generic script.",
     },
     {
-      icon: <Smartphone className="w-5 h-5 text-[var(--color-primary)]" />,
+      icon: <IoIosLink className="w-5 h-5 text-[var(--color-primary)]" />,
       title: "Works with your current phone number",
       description: "No new hardware required.",
     },
@@ -48,14 +50,12 @@ export function Features() {
   return (
     <section
       id="features"
-      className="relative w-full py-24 bg-[var(--color-background-alt)]"
+      className="relative w-full py-18 bg-[var(--color-background-alt)]"
     >
       <div className="w-full mx-auto px-6 lg:px-12 flex flex-col items-center">
-        <div className="flex flex-col items-center mb-16 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-[125px] h-[7px] bg-[#2EA8E0] rounded-full"></div>
-          </div>
-          <h3 className="font-bold text-[12.5px] uppercase tracking-[1.75px] text-[var(--color-primary)] mb-6">
+        <div className="flex flex-col items-center mb-12 text-center">
+          <h3 className="flex items-center gap-2 font-bold text-[12.5px] uppercase tracking-[1.75px] text-[var(--color-primary)] mb-6">
+            <div className="w-[7px] h-[7px] bg-[#2EA8E0] rounded-full"></div>
             What it handles
           </h3>
           <h2 className="text-[32px] lg:text-[40px] font-bold leading-[1.15] tracking-[-0.4px] text-[#0F2233] max-w-[700px]">
@@ -67,7 +67,7 @@ export function Features() {
           {features.map((feature, idx) => (
             <Card
               key={idx}
-              className="h-full hover:scale-105 hover:shadow-lg transition-all duration-300 hover:border-[var(--color-primary)] pt-8 px-2 border-[#EDEEF0]"
+              className="h-full hover:scale-105 hover:shadow-lg transition-all duration-300 hover:border-[var(--color-primary)] px-2 border-[#EDEEF0]"
             >
               <CardHeader className="pb-4">
                 <div className="w-[46px] h-[46px] rounded-[12px] bg-[var(--color-background-alt)] flex items-center justify-center mb-4">

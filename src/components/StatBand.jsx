@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Phone } from "lucide-react";
 
 export function StatBand() {
   return (
@@ -41,7 +42,7 @@ export function StatBand() {
         {/* Form Container */}
         <div className="w-full lg:w-[600px] bg-white rounded-2xl p-6 lg:p-8 shadow-[0_12px_32px_rgba(11,61,46,0.1)] border border-[var(--color-border)]">
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-2.5 h-2.5 rounded-full bg-[#2EA8E0]"></div>
+            <Phone className="size-5 text-[#2EA8E0]" />
             <h3 className="font-bold text-[13px] text-[var(--color-secondary)] uppercase tracking-[1px]">
               Reserve your Florida pilot spot
             </h3>
@@ -80,7 +81,7 @@ export function StatBand() {
                 className="bg-[#FAFCFE] h-12"
               />
             </div>
-            <Button className="w-full mt-4 h-[53px] text-[15px] rounded-full shadow-[0_10px_24px_rgba(21,101,168,0.3)]">
+            <Button className="w-full mt-2.5 h-[53px] text-[15px] rounded-full shadow-[0_10px_24px_rgba(21,101,168,0.3)]">
               Join Florida Pilot Program
             </Button>
             <p className="text-[12.5px] leading-[20px] text-[var(--color-foreground-muted)] mt-4">

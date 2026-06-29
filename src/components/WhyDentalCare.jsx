@@ -29,10 +29,10 @@ const WhyDentalCare = () => {
   ];
 
   return (
-    <section className="w-full py-24 bg-[#F5F4F4]">
+    <section className="w-full py-18 bg-[#F5F4F4]">
       <div className="w-full mx-auto px-6 lg:px-12 flex flex-col items-center">
         {/* Header Section */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center mb-12">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-[7px] h-[7px] bg-[var(--color-accent)] rounded-full"></div>
             <span className="font-bold text-[12.5px] uppercase tracking-[1.75px] text-[var(--color-primary)]">

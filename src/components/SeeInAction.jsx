@@ -18,9 +18,10 @@ const SeeInAction = () => {
           </div>
           <div className="flex flex-col text-center md:text-left">
             <p className="text-[#0F2233] text-[15.5px] leading-[24px] mb-1 font-medium">
-              &quot;I&apos;m Jean, and we&apos;re testing an AI receptionist for
-              dental practices in Florida. I&apos;d love to hear what you think
-              — your feedback shapes what we build next.&quot;
+              <b>&quot;I&apos;m Jean, </b> and we&apos;re testing an AI
+              receptionist for dental practices in Florida. I&apos;d love to
+              hear what you think — your feedback shapes what we build next.
+              <b>&quot;</b>
             </p>
             <p className="text-[var(--color-foreground-muted)] text-[13px] font-medium">
               Jean · Founder, Dental Connect Solutions
@@ -69,7 +70,7 @@ const SeeInAction = () => {
               captures patient information, and follows up automatically.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <Check className="w-[18px] h-[18px] text-[var(--color-accent)] shrink-0 stroke-[3px]" />

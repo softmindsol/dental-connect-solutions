@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Plus } from "lucide-react";
 
 const AccordionContext = React.createContext({});
 const AccordionItemContext = React.createContext(null);
@@ -74,11 +74,11 @@ export function AccordionTrigger({ className, children }) {
       aria-expanded={isExpanded}
     >
       {children}
-      <ChevronDown
+      <Plus
         className={cn(
           "h-5 w-5 shrink-0 text-[var(--color-primary)] transition-all duration-200",
           {
-            "rotate-180": isExpanded,
+            "rotate-45": isExpanded,
           },
         )}
       />
@@ -97,7 +97,9 @@ export function AccordionContent({ className, children }) {
     <div
       className={cn(
         "grid transition-all duration-300 ease-in-out",
-        isExpanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        isExpanded
+          ? "grid-rows-[1fr] opacity-100"
+          : "grid-rows-[0fr] opacity-0",
       )}
     >
       <div className="overflow-hidden">

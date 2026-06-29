@@ -29,10 +29,10 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative w-full py-24 bg-[var(--color-background)]"
+      className="relative w-full py-18 bg-[var(--color-background)]"
     >
       <div className="w-full mx-auto px-6 lg:px-12 flex flex-col items-center">
-        <div className="flex flex-col items-center mb-16 text-center">
+        <div className="flex flex-col items-center mb-10 text-center">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-[7px] h-[7px] bg-[var(--color-accent)] rounded-full"></div>
             <h3 className="font-bold text-[12.5px] uppercase tracking-[1.75px] text-[var(--color-primary)]">
