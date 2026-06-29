@@ -13,7 +13,7 @@ export function StatBand() {
               alt="AI Robot"
               width={246}
               height={296}
-              className="object-contain"
+              className="object-contain animate-float drop-shadow-2xl"
             />
           </div>
           <div className="flex flex-col justify-center">

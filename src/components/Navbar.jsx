@@ -36,6 +36,25 @@ export function Navbar() {
     { name: "FAQ", href: "#faq" },
   ];
 
+  const handleNavClick = (e, href) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        const offset = 87; // Navbar height
+        const elementPosition = elem.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <>
       <nav
@@ -47,7 +66,7 @@ export function Navbar() {
       >
         <div className="w-full mx-auto h-full px-6 lg:px-10 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 relative z-[60]">
+          <Link href="/" onClick={(e) => handleNavClick(e, "#")} className="flex items-center gap-3 relative z-[60]">
             <div className="w-[34px] h-[34px] bg-[var(--color-primary)] rounded-[9px] flex items-center justify-center">
               <Bot className="text-white w-4 h-4" />
             </div>
@@ -62,6 +81,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="font-medium text-[14px] leading-[22px] text-[#4A5C6C] hover:text-[var(--color-primary)] transition-colors"
               >
                 {link.name}
@@ -73,12 +93,14 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="#contact"
+              onClick={(e) => handleNavClick(e, "#contact")}
               className="flex items-center justify-center px-6 h-[54px] rounded-full border border-[#D6E7F2] font-semibold text-[15px] text-[#0B3550] hover:bg-gray-100 transition-colors hover:border-gray-400"
             >
               Contact
             </Link>
             <Link
               href="#pilot-program"
+              onClick={(e) => handleNavClick(e, "#pilot-program")}
               className="flex items-center justify-center px-7 h-[54px] rounded-full bg-[var(--color-primary)] shadow-[0_10px_24px_rgba(21,101,168,0.3)] font-semibold text-[15px] text-white hover:bg-[var(--color-primary-hover)] transition-colors"
             >
               Join Florida Pilot
@@ -113,7 +135,7 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="flex items-center justify-between font-semibold text-[18px] text-[#0B3550] hover:text-[var(--color-primary)] transition-colors w-full py-3 border-b border-gray-200"
             >
               {link.name}
@@ -125,14 +147,14 @@ export function Navbar() {
         <div className="flex flex-col mt-3 gap-3 w-full">
           <Link
             href="#contact"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="flex items-center justify-center w-full h-[54px] rounded-full border border-[#D6E7F2] font-semibold text-[16px] text-[#0B3550] hover:bg-gray-100 transition-colors hover:border-gray-400"
           >
             Contact
           </Link>
           <Link
             href="#pilot-program"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, "#pilot-program")}
             className="flex items-center justify-center w-full h-[54px] rounded-full bg-[var(--color-primary)] shadow-[0_10px_24px_rgba(21,101,168,0.3)] font-semibold text-[16px] text-white hover:bg-[var(--color-primary-hover)] transition-colors"
           >
             Join Florida Pilot
