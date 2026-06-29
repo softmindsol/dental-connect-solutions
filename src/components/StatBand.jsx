@@ -6,7 +6,7 @@ import { Phone } from "lucide-react";
 export function StatBand() {
   return (
     <section className="relative w-full py-16 bg-[var(--color-secondary)]">
-      <div className="w-full mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-10">
+      <div className="w-full mx-auto px-6 lg:px-12 flex flex-col xl:flex-row lg:items-center gap-10">
         <div className="flex-1 flex gap-8">
           <div className="hidden lg:block w-[246px] shrink-0">
             <Image
@@ -26,11 +26,11 @@ export function StatBand() {
                 %
               </span>
             </div>
-            <p className="text-[14.5px] leading-[23px] text-[#84D8FF] mt-2 max-w-[280px]">
+            <p className="text-[14.5px] leading-[23px] text-[#84D8FF] mt-2 xl:max-w-[280px]">
               of incoming calls to medical practices go unanswered during
               business hours.
             </p>
-            <p className="text-[16.5px] leading-[26px] text-[#D6EFFF] mt-6 max-w-[480px]">
+            <p className="text-[16.5px] leading-[26px] text-[#D6EFFF] mt-6 xl:max-w-[480px]">
               For a dental practice, a missed call isn&apos;t just a missed
               appointment — it could be a new patient with a toothache calling
               your competitor next. Dental Connect Solutions makes sure that

@@ -88,7 +88,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-10">
+          <div className="hidden xl:flex items-center gap-6 xl:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -102,7 +102,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-4">
             <Link
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
@@ -121,7 +121,7 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden relative z-[60] p-2 -mr-2 text-[#0B3550] hover:bg-gray-100 rounded-lg transition-colors"
+            className="xl:hidden relative z-[60] p-2 -mr-2 text-[#0B3550] hover:bg-gray-100 rounded-lg transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle Menu"
           >
@@ -134,9 +134,17 @@ export function Navbar() {
         </div>
       </nav>
 
+      {/* Invisible Overlay to close menu on outside click */}
+      <div
+        className={`fixed inset-0 z-50 xl:hidden transition-opacity ${
+          isMobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
       {/* Mobile Menu Dropdown */}
       <div
-        className={`fixed inset-0 z-60 lg:hidden bg-white/50 backdrop-blur-xl border border-primary rounded-2xl transition-all duration-300 ease-in-out mt-20 mb-4 mx-4 flex flex-col px-6 py-5 h-fit overflow-y-auto ${
+        className={`fixed inset-0 z-60 xl:hidden bg-white/80 backdrop-blur-xl shadow-2xl border border-[var(--color-border)] rounded-2xl transition-all duration-300 ease-in-out mt-20 mb-4 mx-4 flex flex-col px-6 py-5 h-fit max-h-[85vh] overflow-y-auto ${
           isMobileMenuOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-[20px] pointer-events-none"

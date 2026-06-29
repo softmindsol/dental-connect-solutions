@@ -26,9 +26,9 @@ export function ReserveYourSpot() {
         </p>
 
         {/* Promo Badge */}
-        <div className="flex items-center gap-2 px-5 py-2 bg-[#E8F3FB]/10 border border-[#C9E3F5] rounded-full mb-10">
+        <div className="flex sm:items-center gap-2 px-5 py-2 bg-[#E8F3FB]/10 border border-[#C9E3F5] rounded-full mb-10">
           <BadgePercent
-            className="w-[18px] h-[18px] text-white"
+            className="w-[18px] sm:mt-0.5 h-[18px] text-white"
             strokeWidth={2}
           />
           <span className="text-[14px] font-semibold text-white">

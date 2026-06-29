@@ -34,7 +34,7 @@ export function Footer() {
           </Link>
 
           {/* Links */}
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-[13.5px] text-[var(--color-secondary)] font-medium">
+          <div className="flex flex-wrap items-center lg:gap-x-6 gap-x-4 gap-y-3 text-[13.5px] text-[var(--color-secondary)] font-medium">
             <Link
               href="#how-it-works"
               className="hover:text-[var(--color-primary)] transition-colors"
