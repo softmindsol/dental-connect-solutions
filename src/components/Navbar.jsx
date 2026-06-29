@@ -56,6 +56,13 @@ export function Navbar() {
     }
   };
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <nav
@@ -69,7 +76,7 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            onClick={(e) => handleNavClick(e, "#")}
+            onClick={handleScroll}
             className="flex items-center gap-3 relative z-[60]"
           >
             <div className="w-[34px] h-[34px] bg-[var(--color-primary)] rounded-[9px] flex items-center justify-center">
