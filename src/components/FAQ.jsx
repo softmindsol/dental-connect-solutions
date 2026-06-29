@@ -80,20 +80,22 @@ export function FAQ() {
             </p>
 
             <div className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
-                <div className="w-[17px] h-[17px] rounded-sm border-[1.4px] border-[var(--color-primary)] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-2.5 h-2.5 text-[var(--color-primary)]" />
-                </div>
+              <div className="flex items-center gap-2">
+                <Check className="size-4 text-[var(--color-primary)]" />
                 <p className="text-[14px] leading-[22px] text-[var(--color-foreground-muted)]">
                   Your feedback shapes which features ship first
                 </p>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="w-[17px] h-[17px] rounded-sm border-[1.4px] border-[var(--color-primary)] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-2.5 h-2.5 text-[var(--color-primary)]" />
-                </div>
+              <div className="flex items-center gap-2">
+                <Check className="size-4 text-[var(--color-primary)]" />
                 <p className="text-[14px] leading-[22px] text-[var(--color-foreground-muted)]">
                   Early pilot practices get priority access at launch
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="size-4 text-[var(--color-primary)]" />
+                <p className="text-[14px] leading-[22px] text-[var(--color-foreground-muted)]">
+                  No long-term contract during the testing phase
                 </p>
               </div>
             </div>

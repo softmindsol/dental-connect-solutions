@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Bot } from "lucide-react";
+import { TbDental } from "react-icons/tb";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
           <Link href="/" className="flex flex-col gap-2.5">
             <div className="flex items-center gap-2.5">
               <div className="w-[34px] h-[34px] bg-[var(--color-primary)] rounded-[9px] flex items-center justify-center">
-                <Bot className="text-white w-4 h-4" />
+                <TbDental className="text-white size-5" />
               </div>
               <span className="font-bold text-[17px] text-[var(--color-secondary)] tracking-tight">
                 Dental Connect Solutions

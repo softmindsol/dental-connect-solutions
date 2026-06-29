@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Bot, Menu, X, ChevronRight } from "lucide-react";
+import { TbDental } from "react-icons/tb";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,9 +67,13 @@ export function Navbar() {
       >
         <div className="w-full mx-auto h-full px-6 lg:px-10 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" onClick={(e) => handleNavClick(e, "#")} className="flex items-center gap-3 relative z-[60]">
+          <Link
+            href="/"
+            onClick={(e) => handleNavClick(e, "#")}
+            className="flex items-center gap-3 relative z-[60]"
+          >
             <div className="w-[34px] h-[34px] bg-[var(--color-primary)] rounded-[9px] flex items-center justify-center">
-              <Bot className="text-white w-4 h-4" />
+              <TbDental className="text-white size-5" />
             </div>
             <span className="font-bold text-[17px] leading-[27px] text-[#0B3550] tracking-tight">
               Dental Connect Solutions

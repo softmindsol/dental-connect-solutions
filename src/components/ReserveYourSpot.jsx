@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 export function ReserveYourSpot() {
   return (
-    <section className="relative w-full py-24 bg-gradient-to-b from-[#0B3550] to-[#1979B6] overflow-hidden">
+    <section className="relative w-full py-18 bg-gradient-to-b from-[#0B3550] to-[#1979B6] overflow-hidden">
       <div className="w-full mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
         {/* Top Badge */}
         <div className="flex items-center gap-2 mb-6">
