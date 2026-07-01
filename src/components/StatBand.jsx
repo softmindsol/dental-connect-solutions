@@ -9,6 +9,7 @@ import { supabase } from "@/lib/supabase";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   practiceName: z.string().min(1, "Practice name is required"),
@@ -49,9 +50,9 @@ export function StatBand() {
 
     if (error) {
       console.error("Error:", error);
-      alert("Failed to reserve your spot. Please try again.");
+      toast.error("Failed to reserve your spot. Please try again.");
     } else {
-      alert("Spot reserved successfully!");
+      toast.success("Spot reserved successfully!");
       reset();
     }
   };
