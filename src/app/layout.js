@@ -11,6 +11,9 @@ const poppins = Poppins({
 export const metadata = {
   title: "Dental Connect Solutions",
   description: "The AI receptionist that never lets a call go to voicemail.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
