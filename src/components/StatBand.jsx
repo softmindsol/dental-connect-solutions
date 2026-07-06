@@ -6,16 +6,27 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Phone } from "lucide-react";
 import { supabase } from "@/lib/supabase";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
+import en from "react-phone-number-input/locale/en.json";
+import "react-phone-number-input/style.css";
+import { PhoneInput } from "./ui/phoneInput";
 
 const formSchema = z.object({
   practiceName: z.string().min(1, "Practice name is required"),
   doctorName: z.string().min(1, "Doctor name is required"),
   email: z.string().email("Invalid email address").min(1, "Email is required"),
+  phoneNumber: z.string().min(1, "Phone number is required"),
 });
+
+const customLabels = { ...en };
+if (typeof getCountries === "function") {
+  getCountries().forEach((country) => {
+    customLabels[country] = `${en[country]} +${getCountryCallingCode(country)}`;
+  });
+}
 
 export function StatBand() {
   const [loading, setLoading] = useState(false);
@@ -23,6 +34,7 @@ export function StatBand() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
     reset,
   } = useForm({
@@ -31,6 +43,7 @@ export function StatBand() {
       practiceName: "",
       doctorName: "",
       email: "",
+      phoneNumber: "",
     },
   });
 
@@ -43,9 +56,27 @@ export function StatBand() {
         practice_name: values.practiceName,
         doctor_name: values.doctorName,
         email: values.email,
+        phone_number: values.phoneNumber,
       },
     ]);
-
+    if (!error) {
+      try {
+        const { data: funcData, error: funcError } =
+          await supabase.functions.invoke("send-confirmation", {
+            body: {
+              practice_name: values.practiceName,
+              doctor_name: values.doctorName,
+              email: values.email,
+              phone_number: values.phoneNumber,
+            },
+          });
+        if (funcError) throw funcError;
+      } catch (err) {
+        console.error("Failed to invoke edge function:", err);
+        // We do not set 'error' here so the success message still shows for the database insertion
+        // Or you can handle it as needed.
+      }
+    }
     setLoading(false);
 
     if (error) {
@@ -154,6 +185,31 @@ export function StatBand() {
               {errors.email && (
                 <p className="text-red-500 text-[11px] mt-1 font-medium">
                   {errors.email.message}
+                </p>
+              )}
+            </div>
+            <div>
+              <label className="text-[11px] font-semibold text-gray-500 uppercase tracking-wide mb-1.5 block">
+                Phone Number
+              </label>
+              <Controller
+                name="phoneNumber"
+                control={control}
+                render={({ field }) => (
+                  <PhoneInput
+                    {...field}
+                    defaultCountry="US"
+                    international
+                    withCountryCallingCode
+                    labels={customLabels}
+                    className="flex bg-[#FAFCFE] h-12 rounded-md border border-[var(--color-border)] px-3 py-2 text-sm focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2"
+                    inputClassName="flex-1 bg-transparent border-none outline-none focus-visible:outline-none focus:outline-none shadow-none text-sm"
+                  />
+                )}
+              />
+              {errors.phoneNumber && (
+                <p className="text-red-500 text-[11px] mt-1 font-medium">
+                  {errors.phoneNumber.message}
                 </p>
               )}
             </div>
