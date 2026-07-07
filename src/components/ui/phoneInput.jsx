@@ -135,11 +135,12 @@ const PhoneInput = React.forwardRef(
 );
 PhoneInput.displayName = "PhoneInput";
 
-const InputComponent = React.forwardRef(({ className, ...props }, ref) => (
+const InputComponent = React.forwardRef(({ className, inputClassName, ...props }, ref) => (
   <input
     className={cn(
       "flex-1 bg-transparent border-none outline-none focus-visible:outline-none focus:outline-none shadow-none text-sm text-gray-900 placeholder:text-gray-400 px-3",
       className,
+      inputClassName
     )}
     {...props}
     ref={ref}
