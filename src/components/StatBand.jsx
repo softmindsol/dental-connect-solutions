@@ -89,8 +89,9 @@ export function StatBand() {
   };
   return (
     <section
+      id="reserveYourSpot"
       suppressHydrationWarning={true}
-      className="relative w-full py-16 bg-[var(--color-secondary)]"
+      className="relative w-full py-16 bg-[var(--color-secondary)] scroll-mt-22 "
     >
       <div className="w-full mx-auto px-6 lg:px-12 flex flex-col xl:flex-row lg:items-center gap-10">
         <div className="flex-1 flex gap-8">

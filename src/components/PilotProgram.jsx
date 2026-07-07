@@ -1,7 +1,18 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
 
 export function PilotProgram() {
+  const handleClick = () => {
+    const element = document.getElementById("reserveYourSpot");
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   const steps = [
     {
       number: "1",
@@ -89,7 +100,10 @@ export function PilotProgram() {
             </div>
 
             <div className="mt-10">
-              <Button className="w-full h-[54px] text-[15px] font-semibold rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white shadow-[0_10px_24px_rgba(21,101,168,0.3)]">
+              <Button
+                onClick={handleClick}
+                className="w-full h-[54px] text-[15px] font-semibold rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white shadow-[0_10px_24px_rgba(21,101,168,0.3)]"
+              >
                 Apply for the Florida Pilot
               </Button>
             </div>

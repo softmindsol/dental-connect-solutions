@@ -1,4 +1,5 @@
 import { Play, Check } from "lucide-react";
+import { DCS } from "../../public/video";
 
 const SeeInAction = () => {
   const features = [
@@ -32,25 +33,11 @@ const SeeInAction = () => {
         {/* Video & Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-[80px] items-center">
           {/* Video Thumbnail */}
-          <div
-            className="relative w-full lg:w-1/2 aspect-[16/10] rounded-[26px] shadow-[0_24px_60px_rgba(11,53,80,0.16)] overflow-hidden group cursor-pointer"
-            style={{
-              background:
-                "radial-gradient(88.05% 87.21% at 25% 20%, rgba(46, 168, 224, 0.55) 0%, rgba(46, 168, 224, 0) 60%), linear-gradient(149.79deg, #0B3550 0%, #103E2D 40%, #0A2A20 100%)",
-            }}
-          >
-            {/* Play Button */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[78px] h-[78px] bg-white rounded-full shadow-[0_14px_30px_rgba(0,0,0,0.3)] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 z-10">
-              <Play className="w-8 h-8 text-[var(--color-primary)] fill-[var(--color-primary)] ml-1.5" />
-            </div>
-
-            {/* Tag */}
-            <div className="absolute bottom-5 left-5 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/5 z-10">
-              <span className="text-[#E8F3FB] text-[12.5px] font-medium">
-                90-second walkthrough
-              </span>
-            </div>
-          </div>
+          <video
+            src={DCS}
+            controls
+            className="w-full lg:w-1/2 aspect-[16/10] rounded-[26px] shadow-[0_24px_60px_rgba(11,53,80,0.16)] object-cover"
+          ></video>
 
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col">
