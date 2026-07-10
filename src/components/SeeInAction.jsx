@@ -1,5 +1,5 @@
-import { Play, Check } from "lucide-react";
-import { DCS } from "../../public/video";
+import { Check } from "lucide-react";
+import { DentalConnectNeverMissPatients } from "../../public/video";
 
 const SeeInAction = () => {
   const features = [
@@ -34,7 +34,7 @@ const SeeInAction = () => {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-[80px] items-center">
           {/* Video Thumbnail */}
           <video
-            src={DCS}
+            src={DentalConnectNeverMissPatients}
             controls
             className="w-full lg:w-1/2 aspect-[16/10] rounded-[26px] shadow-[0_24px_60px_rgba(11,53,80,0.16)] object-cover"
           ></video>
