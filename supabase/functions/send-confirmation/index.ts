@@ -1,5 +1,3 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-
 // Sab origins k liay allow karnay wala CORS header
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -8,7 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 }
 
-serve(async (req) => {
+Deno.serve(async (req) => {
   // Browser preflight (OPTIONS) request ko handle karna zaroori hai,
   // warna actual POST request kabhi bhejta hi nahi aur CORS error deta hai
   if (req.method === "OPTIONS") {
@@ -34,13 +32,13 @@ serve(async (req) => {
 
     const data = await res.json()
 
-    return new Response(JSON.stringify(data), {
+    return new Response(JSON.stringify(data), {   
       status: res.ok ? 200 : 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     })
-  } catch (err) {
+  } catch (err: any) {
     console.error("Error:", err)
-    return new Response(JSON.stringify({ error: String(err) }), {
+    return new Response(JSON.stringify({ error: err.message || String(err) }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     })

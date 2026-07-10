@@ -62,7 +62,7 @@ export function StatBand() {
     if (!error) {
       try {
         const { data: funcData, error: funcError } =
-          await supabase.functions.invoke("send-confirmation", {
+          await supabase.functions.invoke("bright-endpoint", {
             body: {
               practice_name: values.practiceName,
               doctor_name: values.doctorName,
