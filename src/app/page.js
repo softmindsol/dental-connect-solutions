@@ -7,6 +7,7 @@ import { Features } from "@/components/Features";
 import WhyDentalCare from "@/components/WhyDentalCare";
 import { RoiSection } from "@/components/RoiSection";
 import SeeInAction from "@/components/SeeInAction";
+import { FounderStory } from "@/components/FounderStory";
 import { PilotProgram } from "@/components/PilotProgram";
 import { FAQ } from "@/components/FAQ";
 import ReserveYourSpot from "@/components/ReserveYourSpot";
@@ -25,6 +26,7 @@ export default function Home() {
         <HowItWorks />
         <Features />
         <SeeInAction />
+        <FounderStory />
         <PilotProgram />
         <FAQ />
         <ReserveYourSpot />

@@ -38,18 +38,18 @@ export function ReserveYourSpot() {
         </div>
 
         {/* Form */}
-        <form className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-[530px] mb-8">
+        <form className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-[730px] mb-8">
           <Input
             type="email"
             placeholder="Your office email address"
-            className="flex-1 h-[53px] bg-white text-gray-900 rounded-full px-6 text-[14.5px] border-none focus-visible:ring-2 focus-visible:ring-black shadow-none placeholder:text-[#757575]"
+            className="flex-1 min-h-[53px] bg-white text-gray-900 rounded-full px-6 text-[14.5px] border-none focus-visible:ring-2 focus-visible:ring-black shadow-none placeholder:text-[#757575]"
             required
           />
           <Button
             type="submit"
-            className="w-full sm:w-[190px] h-[53px] bg-white hover:border-gray-400 hover:bg-gray-100 text-[#0B3550] font-semibold text-[15px] rounded-full shrink-0 shadow-none cursor-pointer"
+            className="h-[53px] px-8 sm:px-5 bg-white hover:border-gray-400 hover:bg-gray-100 text-[#0B3550] font-semibold text-[15px] rounded-full shrink-0 shadow-none cursor-pointer"
           >
-            Reserve Your Spot
+            Schedule a 15-Minute Discovery Call
           </Button>
         </form>
 

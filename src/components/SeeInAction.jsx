@@ -19,10 +19,17 @@ const SeeInAction = () => {
           </div>
           <div className="flex flex-col text-center md:text-left">
             <p className="text-[#0F2233] text-[15.5px] leading-[24px] mb-1 font-medium">
-              <b>&quot;I&apos;m Jean, </b> and we&apos;re testing an AI
-              receptionist for dental practices in Florida. I&apos;d love to
-              hear what you think — your feedback shapes what we build next.
-              <b>&quot;</b>
+              <b>&quot;I&apos;m Jean, </b> For years I’ve worked in healthcare
+              operations and have seen firsthand how busy front desks become and
+              how easy it is for calls to be missed.
+            </p>
+            <p className="text-[#0F2233] text-[15.5px] leading-[24px] mb-1 font-medium">
+              <b>Dental Connect Solutions</b> was created to help dental teams
+              answer every call, reduce front-desk workload, and improve the
+              patient experience without replacing the people who make your
+              practice special. We’re starting with a small pilot program
+              because we want to build this alongside dental professionals—not
+              in isolation.
             </p>
             <p className="text-[var(--color-foreground-muted)] text-[13px] font-medium">
               Jean · Founder, Dental Connect Solutions
