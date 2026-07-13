@@ -17,7 +17,7 @@ export function Hero() {
             </div>
           </div>
 
-          <h1 className="text-[42px] lg:text-[50px] font-bold leading-[1.15] tracking-[-0.58px] text-[var(--color-secondary)] mb-6">
+          <h1 className="text-[34px] md:text-[40px] lg:text-[50px] font-bold leading-[1.15] tracking-[-0.58px] text-[var(--color-secondary)] mb-6">
             The 24/7 digital <br className="hidden lg:block" />
             coworker that <br className="hidden lg:block" />
             <span className="text-[var(--color-primary)]">
@@ -25,7 +25,7 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="text-[18px] leading-[29px] text-[var(--color-foreground-muted)] mb-10 max-w-[580px]">
+          <p className="text-base md:text-[18px] leading-[29px] text-[var(--color-foreground-muted)] mb-10 max-w-[580px]">
             Dental Connect Solutions answers every incoming call, captures new
             patient opportunities, handles appointment requests, and follows up
             automatically — even when your front desk is already helping another

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Bot, Menu, X, ChevronRight } from "lucide-react";
 import { TbDental } from "react-icons/tb";
+import Image from "next/image";
+import { DcsRow } from "../../public/images";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,12 +81,7 @@ export function Navbar() {
             onClick={handleScroll}
             className="flex items-center gap-3 relative z-[60]"
           >
-            <div className="w-[34px] h-[34px] bg-[var(--color-primary)] rounded-[9px] flex items-center justify-center">
-              <TbDental className="text-white size-5" />
-            </div>
-            <span className="font-bold text-[17px] leading-[27px] text-[#0B3550] tracking-tight">
-              Dental Connect Solutions
-            </span>
+            <Image src={DcsRow} alt="Logo" width={230} height={200} />
           </Link>
 
           {/* Desktop Nav Links */}

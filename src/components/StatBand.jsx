@@ -105,7 +105,7 @@ export function StatBand() {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <div className="flex items-start">
+            {/* <div className="flex items-start">
               <span className="font-bold text-[64px] leading-none text-[#2EA8E0]">
                 42
               </span>
@@ -116,7 +116,14 @@ export function StatBand() {
             <p className="text-[14.5px] leading-[23px] text-[#84D8FF] mt-2 xl:max-w-[280px]">
               of incoming calls to medical practices go unanswered during
               business hours.
-            </p>
+            </p> */}
+            <div>
+              <h1 className="font-semibold text-xl sm:text-2xl text-[#2EA8E0]">
+                Every missed call is a missed opportunity. For a dental
+                practice, that could mean losing a new patient to another
+                office.
+              </h1>
+            </div>
             <p className="text-[16.5px] leading-[26px] text-[#D6EFFF] mt-6 xl:max-w-[480px]">
               For a dental practice, a missed call isn&apos;t just a missed
               appointment — it could be a new patient with a toothache calling
