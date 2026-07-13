@@ -1,9 +1,11 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { StatBand } from "@/components/StatBand";
+import { SchedulingSection } from "@/components/SchedulingSection";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Features } from "@/components/Features";
 import WhyDentalCare from "@/components/WhyDentalCare";
+import { RoiSection } from "@/components/RoiSection";
 import SeeInAction from "@/components/SeeInAction";
 import { PilotProgram } from "@/components/PilotProgram";
 import { FAQ } from "@/components/FAQ";
@@ -17,7 +19,9 @@ export default function Home() {
       <main className="flex flex-col">
         <Hero />
         <StatBand />
+        <SchedulingSection />
         <WhyDentalCare />
+        <RoiSection />
         <HowItWorks />
         <Features />
         <SeeInAction />
