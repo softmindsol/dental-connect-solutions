@@ -111,10 +111,10 @@ export function SchedulingSection() {
           </h2>
 
           <p className="text-[17px] leading-[27px] text-[var(--color-foreground-muted)] mb-10 max-w-[580px]">
-            While basic AI tools only take messages, Dental Connect is designed
-            to directly manage your calendar. It handles everything from new
-            patient calls to cancellations, freeing your team to focus on the
-            patients in the chair.
+            While basic AI tools only take messages, Dental Connect Solutions is
+            designed to directly manage your calendar. It handles everything
+            from new patient calls to cancellations, freeing your team to focus
+            on the patients in the chair.
           </p>
 
           {/* Capabilities Grid */}

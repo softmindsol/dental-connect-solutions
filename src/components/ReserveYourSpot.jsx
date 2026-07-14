@@ -49,7 +49,7 @@ export function ReserveYourSpot() {
             type="submit"
             className="h-[53px] px-8 sm:px-5 bg-white hover:border-gray-400 hover:bg-gray-100 text-[#0B3550] font-semibold text-[15px] rounded-full shrink-0 shadow-none cursor-pointer"
           >
-            Schedule a 15-Minute Discovery Call
+            Reserve Your Spot
           </Button>
         </form>
 

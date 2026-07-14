@@ -52,7 +52,7 @@ export function RoiSection() {
           </div>
 
           <h2 className="text-[34px] md:text-[42px] font-extrabold leading-[1.12] tracking-[-0.5px] text-[var(--color-secondary)] mb-5">
-            What if Dental Connect captured just…
+            What if Dental Connect Solutions captured just…
           </h2>
           <p className="text-[17px] leading-[27px] text-[var(--color-foreground-muted)] max-w-[620px]">
             See the math on how converting missed calls into scheduled
@@ -68,7 +68,7 @@ export function RoiSection() {
               {/* Dynamic Sentence Headline */}
               <div className="mb-8 p-5 bg-[#F4F9FD] rounded-2xl border border-[#D6E7F2]/60">
                 <p className="text-[16px] md:text-[18px] leading-[28px] text-[var(--color-secondary)] font-medium">
-                  What if Dental Connect captured just{" "}
+                  What if Dental Connect Solutions captured just{" "}
                   <strong className="text-[var(--color-primary)] font-extrabold text-[20px] md:text-[22px] px-1 animate-pulse">
                     {patients}
                   </strong>{" "}

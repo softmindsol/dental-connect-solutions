@@ -27,7 +27,7 @@ export function PilotProgram() {
     },
     {
       number: "3",
-      boldPart: "Dental Connect runs alongside your team",
+      boldPart: "Dental Connect Solutions runs alongside your team",
       regularPart:
         " for a trial period — answering overflow calls, not replacing anyone.",
     },

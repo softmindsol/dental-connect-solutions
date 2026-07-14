@@ -8,7 +8,7 @@ export function HowItWorks() {
     },
     {
       number: "2",
-      title: "Dental Connect answers",
+      title: "Dental Connect Solutions answers",
       description:
         "The AI greets the caller, identifies their needs, and gathers key information.",
     },

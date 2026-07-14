@@ -11,7 +11,7 @@ export function FAQ() {
     {
       question: "Will this replace my front-desk staff?",
       answer:
-        "No. Dental Connect is designed to support your team by handling overflow calls, after-hours inquiries, and repetitive call types — not replace your staff.",
+        "No. Dental Connect Solutions is designed to support your team by handling overflow calls, after-hours inquiries, and repetitive call types — not replace your staff.",
     },
     {
       question: "Can it schedule appointments?",

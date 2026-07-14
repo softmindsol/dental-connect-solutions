@@ -60,8 +60,8 @@ const SeeInAction = () => {
             </h2>
 
             <p className="text-[17px] leading-[27px] text-[var(--color-foreground-muted)] mb-10 max-w-[550px]">
-              A quick walkthrough showing how Dental Connect answers calls,
-              captures patient information, and follows up automatically.
+              A quick walkthrough showing how Dental Connect Solutions answers
+              calls, captures patient information, and follows up automatically.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5">
