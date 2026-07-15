@@ -31,11 +31,12 @@ export function FounderStory() {
               </div>
 
               {/* Overlay Quote Tag */}
-              <div className="absolute -bottom-6 -right-6 sm:right-4 bg-[var(--color-secondary)] text-white p-5 rounded-2xl shadow-xl border border-white/10 max-w-[280px]">
+              <div className="absolute -bottom-10 -right-6 sm:right-4 bg-[var(--color-secondary)] text-white p-5 rounded-2xl shadow-xl border border-white/10 max-w-[280px]">
                 <Quote className="w-6 h-6 text-[var(--color-accent)] mb-2" />
                 <p className="text-[12px] leading-relaxed text-[#D6EFFF] italic">
-                  &quot;We built Dental Connect to serve the staff first. If the
-                  team is supported, the patients get better care.&quot;
+                  &quot;We built Dental Connect Solutions to serve the staff
+                  first. If the team is supported, the patients get better
+                  care.&quot;
                 </p>
               </div>
             </div>

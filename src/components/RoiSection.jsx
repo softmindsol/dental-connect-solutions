@@ -168,7 +168,8 @@ export function RoiSection() {
                   <strong>
                     Now imagine never missing another after-hours inquiry again.
                   </strong>{" "}
-                  Dental Connect captures these high-value opportunities 24/7.
+                  Dental Connect Solutions captures these high-value
+                  opportunities 24/7.
                 </p>
               </div>
             </div>
