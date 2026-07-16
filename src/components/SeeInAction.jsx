@@ -1,7 +1,38 @@
+"use client";
 import { Check } from "lucide-react";
 import { DentalConnectNeverMissPatients } from "../../public/video";
+import { useEffect, useRef } from "react";
 
 const SeeInAction = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (videoRef.current) {
+            if (entry.isIntersecting) {
+              videoRef.current.play().catch(() => {});
+            } else {
+              videoRef.current.pause();
+            }
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const features = [
     "New patient inquiry",
     "Insurance questions",
@@ -41,6 +72,7 @@ const SeeInAction = () => {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-[80px] items-center">
           {/* Video Thumbnail */}
           <video
+            ref={videoRef}
             src={DentalConnectNeverMissPatients}
             controls
             className="w-full lg:w-1/2 aspect-[16/10] rounded-[26px] shadow-[0_24px_60px_rgba(11,53,80,0.16)] object-cover"
